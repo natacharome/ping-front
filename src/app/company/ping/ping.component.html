@@ -1,0 +1,62 @@
+<div class="general">
+    <app-navbar-company></app-navbar-company>
+
+    <div class="sous-general">
+
+        <div class="container-title-clear-blue">
+            <div class="body-title">
+                <div class="title-company">
+                    <h3 class="clear-blue-title"> Ping des candidats </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-blue-selection">
+            <div class="container-label">
+                <div class="label-logo-decoy"></div>
+                <div (click)="sortByUserName(route.snapshot.data.pingList)" class="label-nom">Nom</div>
+                <div (click)="sortByTitle(route.snapshot.data.pingList)" class="label-job-title">Poste</div>
+                <div (click)="sortById(route.snapshot.data.pingList)" class="label-date">Date</div>
+                <div (click)="sortByStatus(route.snapshot.data.pingList)" class="label-statut">Statut</div>
+                <div class="label-cv">CV</div>
+                <div class="label-logo-decoy2"></div>
+            </div>
+        </div>
+
+        <div class="selection-card">
+            <div *ngFor="let ping of route.snapshot.data.pingList" class="container-candidate">
+
+                <div class=container-blue>
+
+                    <div class="text">
+                        <div class="container-img">
+                            <img class="picture" src="http://pingjob.herokuapp.com/{{ping.User.picture}}">
+                        </div>
+                        <div class="name">{{ ping.User.firstName }} {{ ping.User.lastName }}</div>
+                        <div class="job-title"> {{ ping.Offer.title }}</div>
+                        <div class="date">{{ ping.updatedAt | date : "dd.MM.y" }}</div>
+                        <div (click)="onStatusPopup(ping.id)" class="message">
+                            <div class="lepoint" [ngStyle]="{'background': ping.Status.color}" matTooltip={{ping.Status.name}}></div>
+                        </div>
+                        <div class="btn-download">
+                            <a href="http://pingjob.herokuapp.com/{{ping.User.cv}}"><i class="fas fa-arrow-down fleche"></i></a>
+                        </div>
+
+                        <div class="btn-detail-small" (click)="onCreate(ping.User.id)">
+                            <i class="fas fa-plus-circle plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="companyUser">
+                    <p *ngIf="ping.CompanyUser!=null" class="companyUserName">Modifié par : {{ ping.CompanyUser.name }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="status-legende">
+            <div *ngFor="let status of route.snapshot.data.statusList" class="button">
+                <div class="status blue" [ngStyle]="{'background-color': status.color}"></div>
+                <p>{{ status.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

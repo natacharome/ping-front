@@ -1,0 +1,61 @@
+<div class="general">
+    <app-navbar-user></app-navbar-user>
+
+    <div class="sous-general">
+
+        <div class="container-title-clear-blue">
+            <app-title-clear-blue></app-title-clear-blue>
+        </div>
+
+        <div class="container-blue">
+            <div class="container-label">
+                <div class="label-logo-decoy"></div>
+                <div class="label-company">Entreprise</div>
+                <div class="label-job-title">Poste</div>
+                <div class="label-date">Date</div>
+                <div class="label-statut">Statut</div>
+            </div>
+            <div class="label-logo-decoy2"></div>
+        </div>
+
+        <div class="container-card-ping">
+            <div *ngFor="let ping of route.snapshot.data.pingList" class="card-ping">
+                <div class="card-body">
+                    <div class="card-container-company">
+                        <div class="card-container-blue">
+                            <i (click)="onDelete(ping.id)" class="fas fa-times delete" matTooltip="Supprimer ce Ping"></i>
+                            <div class="card-container-logo">
+                                <img class="card-logo" src="http://pingjob.herokuapp.com/{{ping.Company.logo}}" />
+                            </div>
+                            <div class="card-text">
+                                <div class="card-container-text">
+                                    <p class="card-company">
+                                        {{ ping.Company.name }}</p>
+                                </div>
+                                <div class="card-container-text">
+                                    <p class="card-job-title">{{ ping.Offer.title }}
+                                    </p>
+                                </div>
+                                <div class="card-container-text">
+                                    <p class="card-date">{{ ping.createdAt | date : "dd.MM.y" }}</p>
+                                </div>
+                                <div class="card-statut">
+                                    <div class="card-lepoint" [ngStyle]="{'background': ping.Status.color}" matTooltip={{ping.Status.name}}></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-btn-detail-medium">
+                            <i class="fas fa-plus-circle card-plus" [routerLink]="['/offer-user', ping.Offer.id]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="status-legende">
+            <div *ngFor="let status of route.snapshot.data.statusList" class="button">
+                <div class="status blue" [ngStyle]="{'background-color': status.color}"></div>
+                <p>{{ status.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

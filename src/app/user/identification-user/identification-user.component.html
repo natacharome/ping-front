@@ -1,0 +1,62 @@
+<div class="general">
+
+
+    <!------------Inscription-------------->
+    <div class="inscription">
+        <div class="img">
+            <img class="logo-img" src="assets/logo-ping/blue_logo.png" alt="" routerLink="/">
+        </div>
+
+        <div class="container-inscription">
+            <h2 class="title-blue">Inscription</h2>
+            <form [formGroup]="formSignUp" (ngSubmit)="onSubmitSignUp()" class="form">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="exemple@gmail.com" formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Prénom</mat-label>
+                    <input matInput placeholder="Dupont" formControlName="firstName" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Nom</mat-label>
+                    <input matInput placeholder="Marcel" formControlName="lastName" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Mot de passe</mat-label>
+                    <input type="password" matInput placeholder="*******" formControlName="password" required>
+                </mat-form-field>
+                <div class="button">
+                    <button class="btn-white">Inscription</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!------------Connexion-------------->
+
+    <div class="connexion">
+        <div class="img">
+            <div class="logo-decoy"></div>
+        </div>
+        <div class="container-connexion">
+            <h2 class="title-white">Connexion</h2>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="exemple@gmail.com" formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Mot de passe</mat-label>
+                    <input type="password" matInput placeholder="*******" formControlName="password" required>
+                </mat-form-field>
+                <p *ngIf="authService.loginAttempt">Connexion au serveur...</p>
+                <p *ngIf="authService.loginAccepted">Connexion acceptée !</p>
+                <p *ngIf="authService.loginError">Erreur de connexion !</p>
+                <div class="button">
+                    <button class="btn-white">Connexion</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+<div class="general">
+    <div *ngIf="authService.isLoggedIn | async as isLoggedIn else noLogin">
+        <div class="navbar">
+            <app-navbar-user></app-navbar-user>
+        </div>
+    </div>
+    <ng-template #noLogin>
+        <app-navbar-nologin></app-navbar-nologin>
+    </ng-template>
+    <div class="sous-general">
+        <div class="burger">
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+                <ul class="burger-menu-elem">
+                    <a class="text-menu" href="#">
+                        <li>Recherche</li>
+                    </a>
+                    <a class="text-menu" href="#">
+                        <li>Dashboard</li>
+                    </a>
+                    <a class="text-menu" href="#">
+                        <li>Mon profil</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <section class="search">
+            <div class="search-nav">
+                <div class="input-wrapper">
+                    <input type="search" placeholder=" QUOI ?" [(ngModel)]="search" (ngModelChange)="change()">
+                    <span class="input-icon fa fa-search"></span>
+                </div>
+                <div *ngIf="geoFound" class="range">
+                    <span class="distance" *ngIf="geoFound" style="font-size: 18px;">Distance max :
+                        {{distanceSlider/10}} km</span>
+                </div>
+                <input class="distance-slider" type="range" #slider min="1" max="200" value="200"
+                    [(ngModel)]="distanceSlider" (ngModelChange)="onDistanceChange(slider.value)">
+            </div>
+            <div class="contract">
+                <p *ngFor="let contractType of route.snapshot.data.contractTypeList"
+                    [ngClass]="[contractBtn[contractType.id-1]]"
+                    (click)=addContractTypeFilter(contractType.name,contractType.id)>{{ contractType.name }}</p>
+            </div>
+            <div class="container">
+                <i class="blue-text" *ngIf="filteredArray.length < 1">
+                    Aucune offre ne correspond à vos critères.
+                </i>
+                <div [@contactsAnimation]="state" *ngFor="let offer of filteredArray">
+                    <div *ngIf="offer.show" class="box">
+                        <div class="sous-container">
+                            <div class="container-text">
+                                <h2 class="title">{{ offer.title }}</h2>
+                                <hr class="line">
+                                <h4 class="company">{{ offer.CompanyUser.Company.name }}</h4>
+                                <p class="description">{{ offer.description }}</p>
+                            </div>
+                            <div class="right-side">
+                                <p class="contract-type">
+                                    {{ offer.ContractType.name }}</p>
+                            </div>
+                        </div>
+                        <div class="key-words">
+                            <p class="words">{{ offer.KeyWordOne.name }}</p>
+                            <p class="words">{{ offer.KeyWordTwo.name }}</p>
+                            <p class="words">{{ offer.KeyWordThree.name }}</p>
+                        </div>
+                        <div class="btn-plus">
+                            <i class="fas fa-plus-circle plus" [routerLink]="['/offer-user', offer.id]"></i>
+                        </div>
+                    </div>
+                </div>
+                <div *ngFor="let offer of filteredArray">
+                    <div *ngIf="!offer.show" class="box-red">
+                        <div class="sous-container">
+                            <div class="container-text">
+                                <h2 class="title">{{ offer.title }}</h2>
+                                <hr class="line">
+                                <h4 class="company-red">{{ offer.CompanyUser.Company.name }}</h4>
+                                <p class="description-red">{{ offer.description }}</p>
+                            </div>
+                            <div class="right-side">
+                                <p class="contract-type-red">
+                                    {{ offer.ContractType.name }}</p>
+                            </div>
+                        </div>
+                        <div class="key-words">
+                            <p class="words-red">{{ offer.KeyWordOne.name }}</p>
+                            <p class="words-red">{{ offer.KeyWordTwo.name }}</p>
+                            <p class="words-red">{{ offer.KeyWordThree.name }}</p>
+                        </div>
+                        <div class="btn-plus">
+                            <i class="fas fa-plus-circle plus-red" [routerLink]="['/offer-user', offer.id]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="carte">
+            <div class="map" id="map"></div>
+        </div>
+
+        <!-- <section class="map">
+                <iframe class="carte" width="500" height="560" margin="3px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=3.0698096752166752%2C50.61767404307959%2C3.0730175971984863%2C50.61957666224991&amp;layer=mapnik" style="border: 1px solid black"></iframe>
+        </section> -->
+    </div>
+</div>

@@ -1,0 +1,35 @@
+/************************* GÉNÉRAL *******************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  padding:10px;
+}
+/************************* Title*******************/
+
+.title-company {
+display: flex;
+text-align: center;
+justify-content: center;
+background-color:  #E9F6FF ;
+width: 450px;
+height: 80px;
+padding: 10px;
+margin: 6%;
+}
+
+h3 {
+padding-top: 15px;
+display: flex;
+text-align: center;
+color:   #60A4FF;
+}

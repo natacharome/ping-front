@@ -1,0 +1,388 @@
+/*********************** General*************************/
+
+.general {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/*********************** sous General et header *************************/
+
+.sous-general {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.left-part {
+    width: 90%;
+}
+
+// .profile-top{
+// // background-color: aquamarine;
+// }
+.profile-top-header {
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    width: inherit;
+}
+
+.dark-title {
+    align-self: center;
+    text-align: center;
+    align-content: center;
+    margin: 28px 0;
+    margin-left: 30%;
+    padding: 15px;
+    background-color: #60a4ff;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+
+.dark-title-cv {
+    align-self: center;
+    text-align: center;
+    align-content: center;
+    margin: 38px 0;
+    // margin-left: 10%;
+    padding: 15px;
+    background-color: #60a4ff;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+
+
+/*********************** card candidate *************************/
+
+.card-candidat {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    align-items: flex-start;
+    height: 40%;
+    background-color: #E9F6FF;
+    // -webkit-box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+    // -moz-box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+    // box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+}
+
+.blue {
+    background-color: #E9F6FF;
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 100%;
+    margin-top: 10px;
+    // -webkit-box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+    // -moz-box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+    // box-shadow: 38px 34px 44px -28px rgba(207,207,207,1);
+}
+
+.delete {
+    font-size: 19px;
+    color: #FF7777;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.sous-container {
+    // margin: 10px;
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+}
+
+.profile {
+    border-radius: 50%;
+    margin: 10px;
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.2s ease-in-out;
+}
+
+.profile:hover {
+    content: '';
+    filter: grayscale(100%);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.container-text {
+    width: 100%
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: #60A4FF;
+    // margin-bottom: 10px;
+    font-size: 20px;
+    // padding:20px;
+}
+
+.inputContainer {
+    width: 70%;
+    margin: 10px;
+}
+
+// .inputContainerForceFull {
+//         width: 100% !important;
+// }
+.description {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #60A4FF;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submit {
+    transition: all 0.5s ease-in-out;
+}
+
+.edit-submit {
+    width: 100%;
+    height: 30%;
+    margin-top: 60%;
+    position: relative;
+    align-items: center;
+}
+
+
+/****************************Key-words****************************/
+
+.key-words {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    // padding-bottom:4%;
+}
+
+.words {
+    margin: 1%;
+    background-color: white;
+    color: #60A4FF;
+    padding: 1%;
+    width: 15%;
+    height: 8%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.container-modifier {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.container-words {
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-modifier {
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/************************* under the candidat card*************************/
+
+.profile-bottom {
+    height: 50%;
+}
+
+.profile-bleft {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.cv-import {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+    border: 1px solid #60A4FF;
+    color: #60A4FF;
+    height: 18px;
+    width: 90%;
+    align-items: center;
+    padding: 16px;
+}
+
+.cv-import-button {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.75em;
+    background-color: #FFF;
+    color: grey;
+    border: 1px solid grey;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.cv-import-button:focus {
+    outline: none;
+}
+
+.cv-import-button:hover {
+    outline: none;
+    background-color: grey;
+    color: #FFF;
+}
+
+.cv-download {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+    border: 1px solid #60A4FF;
+    color: #60A4FF;
+    height: 18px;
+    width: 90%;
+    align-items: center;
+    padding: 16px;
+}
+
+.cv-download-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #60A4FF;
+    height: 18px;
+    align-items: center;
+}
+
+.btn-dl {
+    background-color: grey;
+    font-size: light;
+    color: #FFF;
+    border: 1px solid grey;
+    border-radius: 100%;
+    font-size: 1.5em;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-dl:hover {
+    background-color: #FFF;
+    color: grey;
+    border-color: #FFF;
+    transform: scale(1.1);
+}
+
+
+/************************* Mes informations *************************/
+
+.right-part {
+    width: 50%;
+}
+
+.inputContainer-informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 128px;
+    width: 80%;
+}
+
+.left-side-informations {
+    display: flex;
+    color: #60A4FF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-side-informations-linkedin {
+    display: flex;
+    color: #60A4FF;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-informations {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit-informations {
+    background-color: white;
+    padding: 10px;
+    border-radius: 100%;
+    border: 1px solid #60A4FF;
+    color: #60A4FF;
+    outline: none;
+    height: 35px;
+    width: 35px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.submit-informations:hover {
+    background-color: #60A4FF;
+    border: 1px solid white;
+    color: white;
+}
+
+.submit {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #60A4FF;
+    color: #60A4FF;
+    outline: none;
+    height: 35px;
+    width: 35px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #60A4FF;
+}
+
+.social {
+    color: white;
+    background-color: #60A4FF;
+    padding: 5px;
+}

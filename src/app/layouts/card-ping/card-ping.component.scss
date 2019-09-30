@@ -1,0 +1,104 @@
+/************************* GÉNÉRAL *******************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+}
+
+/************************* CARD *******************/
+.container-company {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  margin: 16px;
+  width: inherit;
+}
+.container-blue {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #60a4ff;
+  // padding: 20px;
+  // padding-left: 0px;
+  height: 70%;
+}
+.text {
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+  height: 50px;
+  font-size: 15px;
+  color: #60a4ff;
+}
+.container-text{
+  display: flex;
+  align-items: center;
+}
+.company{
+  width: 100px;
+  
+  
+}
+.job-title{
+  width: 100px;
+
+}
+.date{
+  width: 100px;
+  
+}
+/************************* logo*******************/
+.container-logo{
+  width:100px;
+  height:70px;
+  padding:10px;
+  margin:10px;
+  
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+/************************* statut*******************/
+.statut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  
+}
+.lepoint{
+  width:10px;
+  height: 10px;
+  background: #3fef4c;
+  border-radius: 100%;
+}
+
+/************************* btn medium details*******************/
+
+.btn-detail-medium {
+  margin: 20px;
+  width: 32px;
+  height: 32px;
+}
+.plus {
+  font-size: 30px;
+  width: 10px;
+  height: 10px;
+  color: #60a4ff;
+}

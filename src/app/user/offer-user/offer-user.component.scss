@@ -1,0 +1,270 @@
+/********************** Body *****************/
+
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+// *{
+//     border:solid black 1px;
+// }
+
+/********************** Key-words left side****************************/
+
+.logo-and-keywords {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo-container {
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-white {
+    display: none;
+}
+
+.menu-keywords {
+    margin: 0;
+    padding: 20px;
+    background: #60A4FF;
+    width: 100px;
+    height: 300px;
+    border-radius: 0 60px 60px 0;
+    margin-top: 130px;
+    justify-content: center;
+    align-content: center;
+}
+
+.skills {
+    color: #60A4FF;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.return {
+    display: flex;
+    // position: absolute;
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 40px;
+    color: #60A4FF;
+    outline: none;
+    cursor: pointer;
+}
+
+.return-bis {
+    outline: none;
+}
+
+
+/*********************************container center card-offer*************************/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container-center {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 85%;
+    width: 50%;
+    margin-top: 150px;
+}
+
+.container-text-offer {
+    background-color: #E9F6FF;
+    padding-right: 20px;
+    border-radius: 0px 100px 0px 0px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    margin-left: 10px;
+    margin-bottom: 0;
+    height: 75%;
+}
+
+.title {
+    color: #666666;
+    margin-bottom: 4px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.line-offer {
+    width: 80%;
+}
+
+.company {
+    color: #60A4FF;
+    padding-left: 20px;
+}
+
+.description-offer {
+    align-content: space-between;
+    color: #60A4FF;
+    padding: 20px;
+    font-size: 14px;
+    height: 70%;
+}
+
+.words {
+    width: 30%;
+    height: 40%;
+    background-color: #60A4FF;
+    color: white;
+    border-radius: 20px;
+    font-size: 10px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+
+/*************************** About company  ***************************************/
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: 60%;
+    margin-right: 5%;
+    margin-top: 150px;
+}
+
+.card-and-mapp {
+    width: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+
+.company-card {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #E9F6FF;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.logo-company {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.logo-picture {
+    display: flex;
+    align-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+}
+
+.title-company {
+    color: #666666;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.line-company {
+    width: 100%;
+    margin: 5px;
+}
+
+.description-company {
+    font-size: 14px;
+    color: #60A4FF;
+    padding: 15px;
+}
+
+
+/************************ Mapp ***************************/
+
+.map {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.carte {
+    width: 100%;
+    height: 200px;
+}
+
+
+/*********************Btn Ping ********************************/
+
+.ping {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    // flex-direction: row-reverse;  
+    // margin-right: 2%;
+    // height: 5%;
+    // position: relative;
+}
+
+.btn-ping {
+    color: #fff;
+    background-color: #60A4FF;
+    outline: none;
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    height: 50px;
+}
+
+.btn-ping:hover {
+    color: #60A4FF;
+    background-color: #fff;
+    border: 1px solid #60A4FF;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #60A4FF;
+}

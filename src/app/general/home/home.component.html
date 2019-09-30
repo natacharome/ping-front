@@ -1,0 +1,38 @@
+<div class="body">
+
+    <header class="header">
+        <div class="logo-container">
+            <img class="logo-white" src="assets/logo-ping/logo-blanc.png" routerLink="/" alt="">
+            <img class="logo" src="assets/logo-ping/blue_logo.png" routerLink="/" alt="">
+        </div>
+        <div class="buttons-top">
+            <a class="btn-white-top" routerLink="/identification-user">Candidat</a>
+            <a class="btn-white-top" routerLink="/sign-in-company">Entreprise</a>
+        </div>
+        <div class="menu-burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="info">
+            <p class="emploi">Ping,<br> votre emploi<br> en quelques clics !</p>
+            <div class="btn-offre">
+                <a (click)="onClick()" routerLink="/search-user" class="btn-white">VOIR LES OFFRES</a>
+            </div>
+        </div>
+    </div>
+    <footer class="btn-social">
+        <a href="http://www.facebook.com"><i class="fab fa-facebook-f social"></i></a>
+        <a href="http://www.twitter.com"><i class="fab fa-twitter social"></i></a>
+        <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in social"></i></a>
+    </footer>
+    <div class="footer-legales">
+        <a class="mentions" routerLink="/legal">Mentions Légales</a>
+    </div>
+
+</div>
+
+<!-- [ngStyle]="{'background' : 'url(./assets/illustration/background.png)' , 'background-repeat': 'no-repeat',  'background-size':'cover'}" -->
